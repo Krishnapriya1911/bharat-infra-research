@@ -1,0 +1,32 @@
+{
+  "input_file": "datasets/processed/mospi_monthly_snapshots.csv",
+  "input_row_count": 8728,
+  "validated_row_count": 8728,
+  "validation_failure_count": 0,
+  "unique_project_count": 1956,
+  "global_latest_report_month": "2026-08",
+  "observation_status_counts": {
+    "ongoing": 8519,
+    "completed": 209
+  },
+  "trajectory_resolution_counts": {
+    "ONGOING_ACTIVE": 1597,
+    "REPORTED_COMPLETED_EXPLICIT_DATE": 88,
+    "REPORTED_COMPLETED_MISSING_DATE": 121,
+    "DISAPPEARED_UNRESOLVED": 150
+  },
+  "completion_date_consistency_counts": {
+    "true": 16,
+    "false": 63,
+    "null": 1877
+  },
+  "forward_dated_completion_count": 6,
+  "actual_before_last_ongoing_snapshot_count": 57,
+  "completion_before_last_forecast_count": 42,
+  "projects_with_explicit_completion_date": 88,
+  "projects_with_completed_status_missing_actual_date": 121,
+  "ongoing_active_count": 1597,
+  "disappeared_unresolved_count": 150,
+  "validation_failures": [],
+  "note": "Trajectory resolution represents administrative/reporting evidence, not proof of physical completion. DISAPPEARED_UNRESOLVED is not treated as a completion event. No survival target has been created."
+}
