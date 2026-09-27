@@ -1,0 +1,15 @@
+{
+  "project_id": "bridge-001",
+  "project_name": "River Crossing Bridge Pilot",
+  "project_type": "bridge",
+  "latitude": 31.326,
+  "longitude": 75.576,
+  "planned_progress": 75,
+  "reported_progress": 60,
+  "expenditure_percent": 78,
+  "planned_start_date": "2025-01-01",
+  "planned_end_date": "2026-08-31",
+  "current_date": "2026-09-27",
+  "rainfall_30d": 120,
+  "site_image_url": "https://example.org/images/bridge-001.jpg"
+}
