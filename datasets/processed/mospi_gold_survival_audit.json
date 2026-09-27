@@ -1,0 +1,1765 @@
+{
+  "source_silver_file": "datasets/processed/mospi_silver_validated.csv",
+  "source_trajectory_file": "datasets/processed/mospi_project_trajectories.csv",
+  "global_latest_report_month": "2026-08",
+  "total_projects_considered": 1956,
+  "included_project_count": 1613,
+  "event_count": 16,
+  "censored_count": 1597,
+  "excluded_project_count": 343,
+  "exclusion_counts_by_reason": {
+    "COMPLETED_STATUS_MISSING_ACTUAL_DATE": 119,
+    "DISAPPEARED_UNRESOLVED": 150,
+    "EVENT_BEFORE_PANEL_ENTRY": 50,
+    "INCONSISTENT_COMPLETION_DATE": 11,
+    "NO_OBSERVED_ONGOING_ENTRY": 13
+  },
+  "trajectory_resolution_counts_input": {
+    "ONGOING_ACTIVE": 1597,
+    "REPORTED_COMPLETED_EXPLICIT_DATE": 88,
+    "REPORTED_COMPLETED_MISSING_DATE": 121,
+    "DISAPPEARED_UNRESOLVED": 150
+  },
+  "included_event_project_count": 16,
+  "included_active_censored_project_count": 1597,
+  "duration_months_summary": {
+    "min": 0,
+    "max": 4,
+    "median": 4,
+    "mean": 3.7662740235585863
+  },
+  "entry_month_counts": {
+    "2026-04": 1489,
+    "2026-05": 21,
+    "2026-06": 19,
+    "2026-07": 48,
+    "2026-08": 36
+  },
+  "exit_month_counts": {
+    "2026-05": 5,
+    "2026-06": 6,
+    "2026-07": 3,
+    "2026-08": 1599
+  },
+  "event_definition_note": "Validated reported completion event requires an explicit month, consistent prior ongoing evidence and event month at or after observed panel entry; it is administrative reporting evidence, not physical completion ground truth.",
+  "censoring_definition_note": "Only ongoing-active projects are administratively right-censored at the global latest report month; unresolved disappearances are excluded.",
+  "left_truncation_note": "First observed ongoing month is administrative panel entry, not project start. Prevalent cases have left truncation; durations measure time from observed panel entry, not full project lifetime.",
+  "research_boundary_note": "Cohort/target metadata only, not a predictor matrix. Actual completion, resolution, consistency, censoring, event, exit and duration are not predictor features. Revised completion and revised cost are withheld. No model training.",
+  "exclusions": [
+    {
+      "project_id": "400005",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "400006",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400019",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400023",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400035",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "400045",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400047",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400048",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400078",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "400093",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400095",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400096",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400097",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400105",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400107",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400109",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400112",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400182",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400220",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400259",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "400271",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400273",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400277",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400280",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "400382",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "602792",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "607653",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "611016",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "611017",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "611927",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "611929",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "611948",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "611951",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "611967",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "611977",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "611978",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "611979",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "612096",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "612151",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "612178",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "612188",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "612819",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "612851",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "612894",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "613002",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "613015",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "613785",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "613786",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "615193",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "615327",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "616254",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "616586",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "616587",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "616856",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "616983",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617200",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617201",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617210",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617212",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617253",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617284",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617333",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617345",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617361",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617374",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617379",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617403",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617408",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617409",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617880",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "617887",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617891",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617900",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617907",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617915",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617917",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617924",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617933",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617944",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617949",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617954",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617957",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617959",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617970",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617973",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617975",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617977",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617981",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617982",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617990",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617992",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "617993",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617995",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "617996",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618000",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "618002",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618005",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618008",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618023",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618026",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618030",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618033",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618045",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618046",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618050",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618051",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618062",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618064",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618072",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618078",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618090",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618093",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618099",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618110",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618118",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618123",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618132",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618136",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618142",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618143",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618144",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618145",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618161",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618167",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618175",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618179",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618181",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618188",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618191",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618192",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618208",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618220",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618229",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618237",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618240",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618258",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618259",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618285",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618325",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618327",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618329",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618330",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618337",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618339",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618341",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618342",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618343",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618347",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618372",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618381",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618382",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618384",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618386",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618396",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618432",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618435",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618439",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618443",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618444",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618454",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618455",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618456",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618460",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "618464",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618465",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618466",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618468",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618484",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618485",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618487",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618488",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618490",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618491",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618498",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618501",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618502",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618503",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618504",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618526",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618527",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618553",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618555",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "618558",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618559",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618560",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618562",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618565",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618569",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618570",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618576",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618578",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618582",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618583",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618614",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618625",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618638",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618652",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618665",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618680",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "618692",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618695",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618698",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618699",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618701",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618743",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618745",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618748",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618749",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "618770",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618773",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618774",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618779",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618819",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618829",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618833",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "618834",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618835",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618839",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618849",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618854",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618855",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618864",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618865",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618874",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618883",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "618893",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "618897",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618904",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618910",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618913",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618915",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618916",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618919",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618943",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618946",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618959",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "618972",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618986",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "618995",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "619063",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619067",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619070",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619075",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619083",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619084",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619090",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "619113",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "619121",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619137",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619144",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619147",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619148",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619157",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "619162",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "619165",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "619209",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619229",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "619320",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "619326",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "701105",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "701263",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "701343",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "701354",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "701395",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "701565",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "702355",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "702637",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "EVENT_BEFORE_PANEL_ENTRY"
+    },
+    {
+      "project_id": "702735",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "702764",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "702798",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "702840",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "702854",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "INCONSISTENT_COMPLETION_DATE"
+    },
+    {
+      "project_id": "703585",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705237",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705244",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705252",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705253",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705298",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705362",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705364",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705396",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705429",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705433",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705434",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705436",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705437",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705444",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705450",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705464",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705480",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705482",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705496",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705497",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705503",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "705506",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705514",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705633",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705648",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705660",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705730",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705747",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705762",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705763",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705771",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705774",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705793",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705799",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705912",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705918",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705919",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "705941",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706757",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706759",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706776",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706777",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706779",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706780",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706781",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706835",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706837",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706898",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706922",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706940",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706942",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706965",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706966",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706988",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "706989",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "707016",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "707017",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "707018",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "707019",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "707052",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "707057",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "707067",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "707267",
+      "trajectory_resolution": "REPORTED_COMPLETED_EXPLICIT_DATE",
+      "reason": "NO_OBSERVED_ONGOING_ENTRY"
+    },
+    {
+      "project_id": "707414",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "709760",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "709782",
+      "trajectory_resolution": "REPORTED_COMPLETED_MISSING_DATE",
+      "reason": "COMPLETED_STATUS_MISSING_ACTUAL_DATE"
+    },
+    {
+      "project_id": "709811",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "709815",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "709816",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    },
+    {
+      "project_id": "709817",
+      "trajectory_resolution": "DISAPPEARED_UNRESOLVED",
+      "reason": "DISAPPEARED_UNRESOLVED"
+    }
+  ]
+}
