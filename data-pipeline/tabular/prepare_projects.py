@@ -1,9 +1,9 @@
-"""Deterministic extraction of PAIMANA August 2026 project tables.
+"""Deterministic extraction of PAIMANA monthly project tables.
 
 Usage: python data-pipeline/tabular/prepare_projects.py
 
-Dates in this PDF have month precision. The parser writes YYYY-MM and does not
-invent a day for day-resolution labels. See the JSON audit alongside the CSVs.
+Dates have month precision. The parser writes YYYY-MM and does not invent a day
+or an outcome label. See the JSON audit alongside the longitudinal CSV.
 """
 
 from __future__ import annotations
@@ -20,9 +20,11 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / "datasets/raw/mospi/reports/FlashReport_August_2026.pdf"
+REPORTS = ROOT / "datasets/raw/mospi/reports"
 OUTPUT = ROOT / "datasets/processed"
-MONTH = "2026-08"
+MONTH_NAMES = {name.upper(): number for number, name in enumerate(
+    ("January", "February", "March", "April", "May", "June", "July", "August",
+     "September", "October", "November", "December"), 1)}
 COLUMNS = [
     "project_id", "project_name", "ministry", "agency", "sector", "state",
     "approval_date", "start_date", "original_completion_date",
@@ -32,9 +34,24 @@ COLUMNS = [
     "source_file", "source_page", "raw_date_values", "raw_cost_values",
 ]
 LABELS = ["delay_days", "planned_duration_days", "delay_ratio", "delay_over_20pct"]
+PANEL_COLUMNS = COLUMNS + ["observation_status"]
 DATE = re.compile(r"\(?\d{2}/\d{4}\)?|\(-\)|NA|N/A")
 NUMBER = re.compile(r"\(?-?\d[\d,]*(?:\.\d+)?\)?|\(-\)")
 CODE = re.compile(r"\(?\d{6}\)?")
+
+
+def discover_reports(directory: Path) -> list[Path]:
+    """Discover PDF inputs; month/order are validated from PDF contents later."""
+    return sorted(p for p in directory.iterdir() if p.is_file() and p.suffix.lower() == ".pdf")
+
+
+def report_month(text: str) -> str:
+    matches = re.findall(r"\b(" + "|".join(MONTH_NAMES) + r")\s+(20\d{2})\b",
+                         text.upper())
+    months = {f"{year}-{MONTH_NAMES[name]:02d}" for name, year in matches}
+    if len(months) != 1:
+        raise ValueError(f"expected one report month, found {sorted(months)}")
+    return months.pop()
 
 
 def parse_date(raw: str | None) -> str | None:
@@ -104,6 +121,11 @@ def deduplicate(rows: list[dict]) -> tuple[list[dict], int, list[dict]]:
                 removed += 1
             else:
                 conflicts.append({"project_id": row["project_id"],
+                                  "source_file": row.get("source_file"),
+                                  "report_month": row["report_month"],
+                                  "section": row.get("observation_status", "unknown"),
+                                  "page": row.get("source_page"),
+                                  "raw_excerpt": row.get("project_name"),
                                   "pages": [seen[key]["source_page"], row["source_page"]],
                                   "reason": "conflicting duplicate ID"})
             continue
@@ -144,7 +166,8 @@ def name_and_agency(words: list[dict], code_top: float) -> tuple[str, str | None
 
 
 def parse_block(words: list[dict], kind: str, page: int, serial: int,
-                anchor_top: float, page_words: list[dict]) -> dict:
+                anchor_top: float, page_words: list[dict], month: str,
+                source_file: str, actual_column: bool) -> dict:
     completed = kind == "completed"
     name_high = 475 if not completed else 480
     codes = [w for w in words if 84 <= w["x0"] < 160 and CODE.fullmatch(w["text"])
@@ -171,9 +194,14 @@ def parse_block(words: list[dict], kind: str, page: int, serial: int,
         completion = tokens(data_words, 680, 820, DATE)
         costs = tokens(data_words, 820, 940, NUMBER)
         spent = tokens(data_words, 940, 1050, NUMBER)
-        if [len(approval), len(completion), len(costs), len(spent)] != [2, 3, 2, 1]:
+        expected_dates = 3 if actual_column else 2
+        if [len(approval), len(completion), len(costs), len(spent)] != [2, expected_dates, 2, 1]:
             raise ValueError(f"column token counts: approval={approval}, completion={completion}, cost={costs}, expenditure={spent}")
-        actual, original, revised = completion
+        if actual_column:
+            actual, original, revised = completion
+        else:
+            actual = None
+            original, revised = completion
         progress = None
     else:
         approval = tokens(data_words, 570, 665, DATE)
@@ -198,8 +226,8 @@ def parse_block(words: list[dict], kind: str, page: int, serial: int,
         "original_cost_crore": parse_number(costs[0]),
         "revised_cost_crore": parse_number(costs[1]),
         "cumulative_expenditure_crore": parse_number(spent[0]),
-        "physical_progress_pct": progress, "report_month": MONTH,
-        "source_file": SOURCE.name, "source_page": page,
+        "physical_progress_pct": progress, "report_month": month,
+        "source_file": source_file, "source_page": page,
         "raw_date_values": json.dumps(raw_dates, ensure_ascii=False),
         "raw_cost_values": json.dumps(raw_costs, ensure_ascii=False),
     }
@@ -209,14 +237,15 @@ def parse_block(words: list[dict], kind: str, page: int, serial: int,
                        ("actual_completion_date", actual)]:
         if raw is not None and raw not in {"(-)", "NA", "N/A"} and result[field] is None:
             raise ValueError(f"invalid {field}: {raw}")
-    return add_delay_labels(result) if completed else result
+    return result
 
 
-def page_rows(page, page_number: int, kind: str) -> tuple[list[dict], list[dict]]:
+def page_rows(page, page_number: int, kind: str, month: str,
+              source_file: str, actual_column: bool) -> tuple[list[dict], list[dict], list[int]]:
     words = [w for w in page.extract_words(extra_attrs=["fontname"])
              if 250 < w["top"] < 1420]
     anchors = [w for w in words if w["x0"] < 85 and w["text"].isdigit()
-               and 1 <= int(w["text"]) <= (47 if kind == "completed" else 1731)]
+               and 1 <= int(w["text"]) <= 10000]
     anchors.sort(key=lambda w: w["top"])
     codes = [w for w in words if 84 <= w["x0"] < 160 and CODE.fullmatch(w["text"])
              and "Bold" in w["fontname"]]
@@ -227,21 +256,25 @@ def page_rows(page, page_number: int, kind: str) -> tuple[list[dict], list[dict]
         following = [c for c in codes if anchor["top"] - 50 <= c["top"]
                      and c["top"] > prior_end]
         if not following:
-            failures.append({"section": kind, "page": page_number, "serial": anchor["text"],
-                             "reason": "no following project code"})
+            failures.append({"source_file": source_file, "report_month": month,
+                             "section": kind, "page": page_number, "serial": anchor["text"],
+                             "reason": "no following project code",
+                             "raw_excerpt": " ".join(w["text"] for w in words
+                                                     if abs(w["top"] - anchor["top"]) < 18)[:300]})
             continue
         end = following[0]["top"] + 1
         block = [w for w in words if prior_end < w["top"] <= end]
         try:
             rows.append(parse_block(block, kind, page_number, int(anchor["text"]),
-                                    anchor["top"], words))
+                                    anchor["top"], words, month, source_file, actual_column))
         except ValueError as exc:
-            failures.append({"section": kind, "page": page_number, "serial": anchor["text"],
+            failures.append({"source_file": source_file, "report_month": month,
+                             "section": kind, "page": page_number, "serial": anchor["text"],
                              "project_code_candidate": following[0]["text"],
                              "reason": str(exc),
                              "raw_excerpt": " ".join(w["text"] for w in block[:35])})
         prior_end = end
-    return rows, failures
+    return rows, failures, [int(a["text"]) for a in anchors]
 
 
 def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
@@ -251,51 +284,120 @@ def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
         writer.writerows(rows)
 
 
-def main() -> None:
-    global SOURCE
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", type=Path, default=SOURCE)
-    parser.add_argument("--output-dir", type=Path, default=OUTPUT)
-    args = parser.parse_args()
-    SOURCE = args.source.resolve()
+def parse_report(path: Path) -> tuple[list[dict], list[dict], dict]:
     ongoing, completed, failures = [], [], []
-    with pdfplumber.open(SOURCE) as pdf:
-        if len(pdf.pages) != 153:
-            raise RuntimeError(f"unexpected PDF page count: {len(pdf.pages)}")
+    serials = {"ongoing": [], "completed": []}
+    section_pages = Counter()
+    with pdfplumber.open(path) as pdf:
+        month = report_month(pdf.pages[0].extract_text() or "")
         for index, page in enumerate(pdf.pages):
-            header = (page.crop((0, 100, 1080, 250)).extract_text() or "")
+            header = page.crop((0, 100, page.width, 250)).extract_text() or ""
             kind = ("completed" if "Completed Projects During Month" in header else
                     "ongoing" if "All Ongoing Projects" in header else None)
-            if kind:
-                records, errors = page_rows(page, index + 1, kind)
-                (completed if kind == "completed" else ongoing).extend(records)
-                failures.extend(errors)
+            if kind is None:
+                continue
+            if report_month(header) != month:
+                raise RuntimeError(f"{path.name} page {index + 1}: inconsistent report month")
+            actual_column = "Actual Date of Completion" in header
+            if kind == "ongoing" and actual_column:
+                raise RuntimeError(f"{path.name} page {index + 1}: unexpected ongoing header")
+            records, errors, page_serials = page_rows(
+                page, index + 1, kind, month, path.name, actual_column)
+            section_pages[kind] += 1
+            serials[kind].extend(page_serials)
+            (completed if kind == "completed" else ongoing).extend(records)
+            failures.extend(errors)
+    for kind in ("ongoing", "completed"):
+        actual = serials[kind]
+        if not actual or actual != list(range(1, max(actual) + 1)):
+            raise RuntimeError(f"{path.name}: {kind} printed serials are missing, repeated or out of order")
     ongoing, ongoing_dupes, ongoing_conflicts = deduplicate(ongoing)
     completed, completed_dupes, completed_conflicts = deduplicate(completed)
     failures.extend(ongoing_conflicts + completed_conflicts)
-    # The appendix labels 1,731 ongoing and 47 completed serials. A change in
-    # layout must not silently produce a plausible-looking partial export.
-    if len(ongoing) + ongoing_dupes + sum(f.get("section") == "ongoing" for f in failures) != 1731:
-        raise RuntimeError("ongoing table coverage does not match 1,731 printed serials")
-    if len(completed) + completed_dupes + sum(f.get("section") == "completed" for f in failures) != 47:
-        raise RuntimeError("completed table coverage does not match 47 printed serials")
-    counts = {"ongoing": len(ongoing), "completed": len(completed),
-              "duplicate_count_removed": ongoing_dupes + completed_dupes,
-              "parsing_failure_count": len(failures),
-              "parsing_failures_by_section": dict(Counter(f.get("section", "duplicate_conflict")
-                                                         for f in failures)),
-              "missing_critical_dates": {
-                  "ongoing": sum(not r["start_date"] or not r["original_completion_date"] for r in ongoing),
-                  "completed": sum(not r["start_date"] or not r["original_completion_date"]
-                                   or not r["actual_completion_date"] for r in completed),
-              },
-              "note": "Source dates are MM/YYYY. Exact day-based delay labels remain missing."}
+    total_serials = len(serials["ongoing"]) + len(serials["completed"])
+    if len(failures) > total_serials * 0.30:
+        raise RuntimeError(f"{path.name}: {len(failures)}/{total_serials} rows rejected; layout requires review")
+    audit = {
+        "source_file": path.name, "report_month": month,
+        "printed_serials": {kind: len(values) for kind, values in serials.items()},
+        "section_pages": dict(section_pages),
+        "parsed_ongoing_rows": len(ongoing), "parsed_completed_rows": len(completed),
+        "rejected_rows": len(failures),
+        "duplicate_rows_removed_within_report": ongoing_dupes + completed_dupes,
+        "missing_critical_dates": {
+            "ongoing": sum(not r["start_date"] or not r["original_completion_date"] for r in ongoing),
+            "completed": sum(not r["start_date"] or not r["original_completion_date"]
+                             or not r["actual_completion_date"] for r in completed),
+        },
+        "completed_without_explicit_actual_date": sum(not r["actual_completion_date"] for r in completed),
+        "failures": failures,
+    }
+    return ongoing, completed, audit
+
+
+def continuity(rows: list[dict]) -> dict:
+    months = sorted({r["report_month"] for r in rows})
+    all_ids = {r["project_id"] for r in rows}
+    id_months: dict[str, set[str]] = {}
+    ongoing = {month: set() for month in months}
+    completed = {month: set() for month in months}
+    for row in rows:
+        ident, month = row["project_id"], row["report_month"]
+        id_months.setdefault(ident, set()).add(month)
+        (ongoing if row["observation_status"] == "ongoing" else completed)[month].add(ident)
+    transitions = []
+    for index, month in enumerate(months):
+        previous = ongoing[months[index - 1]] if index else set()
+        transitions.append({
+            "report_month": month,
+            "entering_ongoing_ids": len(ongoing[month] - previous),
+            "leaving_ongoing_ids": len(previous - ongoing[month]) if index else 0,
+            "ongoing_ids": len(ongoing[month]),
+        })
+    previously_ongoing: set[str] = set()
+    later_completed: set[str] = set()
+    for month in months:
+        later_completed.update(previously_ongoing & completed[month])
+        previously_ongoing.update(ongoing[month])
+    return {
+        "unique_project_ids": len(all_ids),
+        "projects_present_in_multiple_months": sum(len(seen) > 1 for seen in id_months.values()),
+        "ongoing_panel_changes": transitions,
+        "previously_ongoing_ids_later_in_completed_tables": len(later_completed),
+        "note": "Direct project-ID matches only; rejected rows are excluded. Leaving ongoing is not itself proof of completion.",
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--reports-dir", type=Path, default=REPORTS)
+    parser.add_argument("--output-dir", type=Path, default=OUTPUT)
+    args = parser.parse_args()
+    paths = discover_reports(args.reports_dir)
+    if not paths:
+        raise RuntimeError(f"no PDF reports found in {args.reports_dir}")
+    rows, audits, failures = [], [], []
+    for path in paths:
+        ongoing, completed, audit = parse_report(path)
+        rows.extend({**r, "observation_status": "ongoing"} for r in ongoing)
+        rows.extend({**r, "observation_status": "completed"} for r in completed)
+        failures.extend(audit.pop("failures"))
+        audits.append(audit)
+        print(f"{path.name}: {audit['parsed_ongoing_rows']} ongoing, "
+              f"{audit['parsed_completed_rows']} completed, {audit['rejected_rows']} rejected",
+              flush=True)
+    months = [a["report_month"] for a in audits]
+    if len(set(months)) != len(months):
+        raise RuntimeError(f"multiple reports claim the same month: {months}")
+    rows.sort(key=lambda r: (r["report_month"], r["project_id"], r["observation_status"]))
+    audits.sort(key=lambda a: a["report_month"])
+    summary = continuity(rows)
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    write_csv(args.output_dir / "mospi_ongoing_projects.csv", ongoing, COLUMNS)
-    write_csv(args.output_dir / "mospi_completed_projects.csv", completed, COLUMNS + LABELS)
-    (args.output_dir / "mospi_parsing_failures.json").write_text(
-        json.dumps({"summary": counts, "failures": failures}, indent=2), encoding="utf-8")
-    print(json.dumps(counts, indent=2))
+    write_csv(args.output_dir / "mospi_monthly_snapshots.csv", rows, PANEL_COLUMNS)
+    (args.output_dir / "mospi_multimonth_audit.json").write_text(
+        json.dumps({"per_report": audits, "continuity": summary, "failures": failures},
+                   indent=2, ensure_ascii=False), encoding="utf-8")
+    print(json.dumps({"per_report": audits, "continuity": summary}, indent=2))
 
 
 if __name__ == "__main__":
