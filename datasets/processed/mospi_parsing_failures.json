@@ -1,0 +1,1099 @@
+{
+  "summary": {
+    "ongoing": 1597,
+    "completed": 46,
+    "duplicate_count_removed": 0,
+    "parsing_failure_count": 135,
+    "parsing_failures_by_section": {
+      "completed": 1,
+      "ongoing": 134
+    },
+    "missing_critical_dates": {
+      "ongoing": 0,
+      "completed": 0
+    },
+    "note": "Source dates are MM/YYYY. Exact day-based delay labels remain missing."
+  },
+  "failures": [
+    {
+      "section": "completed",
+      "page": 37,
+      "serial": "5",
+      "project_code_candidate": "701565",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "1,010.00 Total (1) 895.30 (1,107.00) Ministry of Ports, Shipping and Waterways Inland Waterways Jal Marg Vikas Project 5 (Inland Waterways Authority of India [IWAI]) 701565 Multi-States (Bihar, 06/2026 01/2018 5,369.18 Jharkhand, Uttar (12/2023) 4,220.81 (02/2018)"
+    },
+    {
+      "section": "ongoing",
+      "page": 57,
+      "serial": "16",
+      "project_code_candidate": "(611570)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (07/2022) (12/2026) 0.00 SITC of ATM Automation System and ASMGCS [Including SMR & MLAT] for Mumbai, Navi Mumbai, Jewar [earlier MOPA, without ASMGCS], HIAL & BIAL 16 (Airport Authority of India [AAI]) (611570)"
+    },
+    {
+      "section": "ongoing",
+      "page": 62,
+      "serial": "110",
+      "project_code_candidate": "(400369)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (08/2025) (-) 0.00 BINA KAKRI AMALGAMATION EXPANS 110 (NCL - CIL) (400369) Multi-States (Madhya Pradesh, 08/2020 03/2024 836.42 840.16 92.25"
+    },
+    {
+      "section": "ongoing",
+      "page": 62,
+      "serial": "111",
+      "project_code_candidate": "(615183)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttar Pradesh) (08/2020) (03/2027) 0.00 KHADIA EXPANSION [10 TO 16 MTP 111 (NCL - CIL) (615183) Multi-States (Madhya Pradesh, 06/2021 03/2025 491.67 276.39 58.23"
+    },
+    {
+      "section": "ongoing",
+      "page": 64,
+      "serial": "171",
+      "project_code_candidate": "(602096)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (05/2025) (03/2030) 0.00 Subansiri Lower HE Project [2000 MW] 171 (National Hydroelectric Power Corporation Limited [NHPC]) (602096) Multi-States (Arunachal 09/2003 09/2010 6,285.33 26,575.24 98.07"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "219",
+      "project_code_candidate": "(617185)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Transmission System for Integration of Kurnool-IV REZ Phase-I [for 4.5 GW] [POWERGRID Kurnool-IV Transmission Limited] 219 (Power Grid Corporation of India Limited [POWERGRID]) (617185) Multi-States (Andhra Pradesh, 03/2025 (03/2025) 03/2027 5,550.00 1,963.00 34.50"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "220",
+      "project_code_candidate": "(617806)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Karnataka) Transmission System for Integration of Ananthapur 2 REZ Phase 1 for 4.5 GW. SPV Name Anantapuram 2 REZ Transmission Ltd 220 (Sterlite Power) (617806) Multi-States (Andhra Pradesh, 08/2024 (03/2025) 03/2027 4,535.99 1,785.57"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "221",
+      "project_code_candidate": "(619030)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Karnataka) Inter-Regional Strengthening between SR Grid and ER Grid 221 (Power Grid Corporation of India Limited [POWERGRID]) (619030) Multi-States (Andhra Pradesh, 02/2026 08/2028 2,722.50 198.74 3.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "222",
+      "project_code_candidate": "(602223)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Odisha) (02/2026) (-) 0.00 Comprehensive Scheme for Strengthening of Transmission and Distribution [T&D] Systems [CSST&DS] in Arunachal Pradesh and Sikkim 222 (Power Grid Corporation of India Limited [POWERGRID]) (602223) Multi-States (Arunachal 10/2014 (10/2014)"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "224",
+      "project_code_candidate": "(617271)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Mizoram, Nagaland, Tripura) Eastern Region Expansion Scheme-43 [ERES-43] 224 (Power Grid Corporation of India Limited [POWERGRID]) (617271) Multi-States (Bihar, Odisha, 09/2024 03/2026 342.69 150.92 29.75"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "225",
+      "project_code_candidate": "(617807)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) West Bengal) (09/2024) (09/2026) 0.00 Inter-regional [NR-WR] Transmission System strengthening to relieve the loading of 765 kV Vindhyachal-Varanasi D/c line 225 (Power Grid Corporation of India Limited [POWERGRID]) (617807) Multi-States (Bihar, Uttar 10/2025"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "226",
+      "project_code_candidate": "(617270)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) Eastern Region Expansion Scheme-44 [ERES-44] 226 (Power Grid Corporation of India Limited [POWERGRID]) (617270) Multi-States (Bihar, West 11/2024 05/2026 408.94 6.13 1.50"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "227",
+      "project_code_candidate": "(663560)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) (11/2024) (09/2027) 0.00 WR 227 \u2013 ER Inter Regional Network Expansion Scheme \u2013 Part A (Power Grid Corporation of India Limited [POWERGRID]) (663560) Multi-States (Chhattisgarh, 06/2026 06/2029 6,444.00 12.88 0.10"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "228",
+      "project_code_candidate": "(612132)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Jharkhand, West Bengal) (06/2026) (-) 0.00 Transmission Scheme for Evacuation of power from REZ in Rajasthan [20 GW] under Phase-III Part D Phase I [Sikar Khetri Transmission Ltd] 228 (Power Grid Corporation of"
+    },
+    {
+      "section": "ongoing",
+      "page": 67,
+      "serial": "229",
+      "project_code_candidate": "(611735)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Rajasthan) Transmission system for evacuation of power from REZ in Rajasthan 20GW under Phase-III Part J 229 (Power Grid Corporation of India Limited [POWERGRID]) (611735) Multi-States (Delhi, Rajasthan) 12/2022 (12/2022) 03/2025 331.00 248.25"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "230",
+      "project_code_candidate": "(615347)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "TRANSMISSION SYSTEM FOR EVACUATION OF POWER FROM POTENTIAL RENEWABLE ENERGY ZONE IN KHAVDA AREA OF GUJARAT UNDER PHASE-V [8 GW] PART A [SPV Name POWERGRID West Central Transmission Limited] 230 (Power Grid Corporation of India"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "231",
+      "project_code_candidate": "(615339)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Transmission system for evacuation of power from Rajasthan REZ Ph-IV [Part- 3/6GW] [Bikaner complex] Part A [SPV Name POWERGRID Bikaner IV Transmission Limited] 231 (Power Grid Corporation of India Limited [POWERGRID]) (615339) Multi-States"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "232",
+      "project_code_candidate": "(615340)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) TRANSMISSION SYSTEM FOR EVACUATION OF POWER FROM RAJASTHAN REZ PH-IV [PART-3/ 6 GW] [BIKANER COMPLEX] PART B [SPV Name POWERGRID Siwani Transmission Limited] 232 (Power Grid Corporation of India Limited [POWERGRID]) (615340) Multi-States"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "233",
+      "project_code_candidate": "(617808)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Inter-Regional Strengthening between SR Grid and WR Grid 233 (Power Grid Corporation of India Limited [POWERGRID]) (617808) Multi-States (Karnataka, 10/2025 10/2027 1,007.00 60.42 3.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "234",
+      "project_code_candidate": "(612138)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) (10/2025) (-) 0.00 Transmission Scheme for Solar Energy Zone in Bidar [2500 MW], Karnataka [Bidar Transmission Ltd] 234 (Power Grid Corporation of India Limited [POWERGRID]) (612138) Multi-States (Karnataka, 02/2024 (02/2024) 02/2026 1,368.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "235",
+      "project_code_candidate": "(615333)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) Transmission System for Evacuation of Power from Rajasthan REZ Ph-IV [Part-2 5.5 GW] [Jaisalmer/Barmer Complex] Part D [SPV Name POWERGRID Beawar Mandsaur Transmission Limited] 235 (Power Grid Corporation of India Limited [POWERGRID])"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "236",
+      "project_code_candidate": "(615334)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Transmission System for Evacuation of Power from Rajasthan REZ Ph-IV [Part-2 5.5 GW] [Jaisalmer/Barmer Complex] Part E [SPV Name POWERGRID Mewar Transmission Limited] 236 (Power Grid Corporation of India Limited [POWERGRID]) (615334) Multi-States"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "237",
+      "project_code_candidate": "(617186)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Rajasthan REZ Ph-V [Part-1- 4 GW] [Sirohi/Nagaur] Complex [POWERGRID Sirohi Khandwa Transmission Limited] 237 (Power Grid Corporation of India Limited [POWERGRID]) (617186) Multi-States (Madhya Pradesh, 03/2025 (03/2025) 03/2027 5,028.00 1,608.96 38.76 (06/2027) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "239",
+      "project_code_candidate": "(612133)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Rajasthan, Uttar Pradesh) (01/2025) (-) 0.00 Transmission System for Evacuation of power from Rajasthan REZ Ph-IV [Part-1] [Bikaner Complex] Part D [Neemrana Bareilly Transmission Ltd] 239 (Power Grid Corporation of India Limited [POWERGRID])"
+    },
+    {
+      "section": "ongoing",
+      "page": 68,
+      "serial": "240",
+      "project_code_candidate": "(616670)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) Transmission System for evacuation of Power from Rajasthan REZ Ph-IV [Part-4 3.5 GW] Part A [SPV name POWERGRID Ghiror Transmission Limited] 240 (Power Grid Corporation of India Limited [POWERGRID]) (616670) Multi-States (Rajasthan,"
+    },
+    {
+      "section": "ongoing",
+      "page": 70,
+      "serial": "276",
+      "project_code_candidate": "(617206)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (12/2022) (-) 0.00 Delhi Metro Rail Phase-IV [Rithala - Kundli Corridor] 276 (Delhi Metro Rail Corporation Limited [DMRC]) (617206) Multi-States (Delhi, 01/2025 01/2029 6,230.99 818.42 6.84"
+    },
+    {
+      "section": "ongoing",
+      "page": 77,
+      "serial": "417",
+      "project_code_candidate": "(616254)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (05/2023) (09/2026) 0.00 Visakh Raipur Pipeline Project 417 (Hindustan Petroleum Corporation Limited) (616254) Multi-States (Chhattisgarh, 09/2024 09/2027 2,212.00 576.00 39.90"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "597",
+      "project_code_candidate": "(705491)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (08/2019) (06/2029) 0.00 Marikuppam-Kuppam 23.7 km 597 (CAOC/SWR SWR mor) (705491) Multi-States (Andhra Pradesh, 10/2011 06/2026 297.00 145.88 20.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "598",
+      "project_code_candidate": "(705512)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Karnataka) (09/2019) (06/2026) 0.00 Kottavalasa-Koraput 189.278 km 598 (CAO/C/ECOR ECoR mor) (705512) Multi-States (Andhra Pradesh, 12/2015 03/2022 2,500.00 2,358.96 74.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "599",
+      "project_code_candidate": "(617210)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Odisha) (11/2019) (03/2028) 0.00 Tirupati-Pakala-Katpadi Doubling 104.39 Km Item83/NR/2024-25 599 (CAO/C/SCoR SCoR mor) (617210) Multi-States (Andhra Pradesh, 04/2025 04/2029 1,215.56 0.00 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "600",
+      "project_code_candidate": "(705610)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Tamil Nadu) (12/2025) (-) 0.00 Renigunta 9.60 km, Wadi 7.60 km & Gooty 3.8 km - Bypass 600 (CAO/C/SCoR SCoR mor) (705610) Multi-States (Andhra Pradesh, 04/2016 12/2025 302.00 421.36 50.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "601",
+      "project_code_candidate": "(616857)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Tamil Nadu) (02/2021) (03/2026) 0.00 Doubling between Motumari Vishnupuram 88.81 km and Rail over Rail RoR at Motumari 10.877 Km 601 (CAO/C/SCoR SCoR mor) (616857) Multi-States (Andhra Pradesh, 02/2024 (03/2025) 03/2029 1,595.55 327.62"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "602",
+      "project_code_candidate": "(617214)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) South Central Railway- Rail connectivity to Amaravati, Capital of Andhra Pradesh Errupalem- Amaravati- Namburu New line 57 km PB7/WR/2023-24 602 (CAO/C/SCoR SCoR mor) (617214) Multi-States (Andhra Pradesh, 11/2024 (01/2026) 03/2027 2,047.40 155.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "603",
+      "project_code_candidate": "(705632)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) Vijayawada19.50 km & Kazipet10.65 km -Byepass line 603 (CAO/C/SCoR SCoR mor) (705632) Multi-States (Andhra Pradesh, 04/2016 01/2025 647.00 711.08 90.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "604",
+      "project_code_candidate": "(705401)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) (07/2020) (12/2025) 0.00 Murkongselek-Pasighat 26.15 km 604 (CAO/C-II/NFR NFR mor) (705401) Multi-States (Arunachal 02/2011 03/2025 435.00 1,057.21 67.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "605",
+      "project_code_candidate": "(705392)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh, Assam) (10/2019) (12/2026) 0.00 Dimapur-Kohima 88 km 605 (CAO/C-1/NFR NFR mor) (705392) Multi-States (Assam, 11/2006 03/2025 6,663.00 6,891.03 48.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "606",
+      "project_code_candidate": "(705375)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nagaland) (09/2019) (12/2029) 0.00 Koderma-Tilaiya 68 km 606 (CAO/Con/South/MHX ECR mor) (705375) Multi-States 11/2004 02/2025 1,626.00 2,272.44 90.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "607",
+      "project_code_candidate": "(705385)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (Bihar, Jharkhand) (08/2019) (02/2026) 0.00 Pirpainti - Jasidih 97 km 607 (CAOC/ER ER mor) (705385) Multi-States 03/2014 03/2028 2,555.00 1,779.91 40.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "609",
+      "project_code_candidate": "(617224)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttar Pradesh, West Bengal) (03/2024) (-) 0.00 Gorakhpur-Valmikinagar Doubling project 609 (CONSTRUCTION / NE-RAILWAY) (617224) Multi-States (Bihar, Uttar 08/2023 12/2027 1,120.00 442.70 46.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "610",
+      "project_code_candidate": "(617333)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) (03/2024) (-) 0.00 Construction of surface traingle between Bhadaura and new crossing station Karma Dildarnagar-Taraghat line 11.1 km PB72/NR/2022-23 610 (CAO/Con/South/MHX ECR mor) (617333) Multi-States (Bihar, Uttar 10/2022 (05/2024) 02/2027 199.96 64.59"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "611",
+      "project_code_candidate": "(705562)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) Chhapra-Ballia - Patch doubling 65 km 611 (CONSTRUCTION / NE-RAILWAY) (705562) Multi-States (Bihar, Uttar 03/2013 02/2025 963.00 1,008.54 95.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "612",
+      "project_code_candidate": "(617245)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) (01/2020) (05/2026) 0.00 Katihar-Kumedpur & Katihar-Mukuria 64.5 km Umbrella work PB57/2019-20/NR 612 (CAO/C-II/NFR NFR mor) (617245) Multi-States (Bihar, West 08/2022 08/2027 942.64 952.95 65.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "613",
+      "project_code_candidate": "(705617)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) (07/2020) (02/2027) 0.00 Rajnandgaon-Nagpur - 3rd line 228 km 613 (CAOC/SECR SECR mor) (705617) Multi-States (Chhattisgarh, 09/2016 12/2024 3,545.00 3,147.30 95.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "614",
+      "project_code_candidate": "(709815)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) (12/2019) (06/2026) 0.00 4th line - Bhatapara-Hathband 8.8 km PB72/NR/2022-23 614 (CAOC/SECR SECR mor) (709815) Multi-States (Chhattisgarh, 09/2022 01/2027 177.03 21.08 3.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "615",
+      "project_code_candidate": "(709816)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) (09/2024) (12/2027) 0.00 4th line - Bhilai-Bhilai nagar 8.8 km PB72/NR/2022-23 615 (CAOC/SECR SECR mor) (709816) Multi-States (Chhattisgarh, 09/2022 02/2027 177.34 39.39 3.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 86,
+      "serial": "616",
+      "project_code_candidate": "(709817)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) (09/2024) (02/2027) 0.00 4th line - Dadhapara-Belha 9.2 km PB72/NR/2022-23 616 (CAOC/SECR SECR mor) (709817) Multi-States (Chhattisgarh, 09/2022 11/2026 169.06 65.72 10.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "617",
+      "project_code_candidate": "(705511)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "Jagdalpur-Koraput 110.22 km 617 (CAO/C/ECOR ECoR mor) (705511) Multi-States (Chhattisgarh, 12/2015 03/2024 1,547.00 1,391.95 90.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "618",
+      "project_code_candidate": "(705616)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Odisha) (11/2019) (12/2026) 0.00 Jharsuguda - Bilaspur - 4th line 206 km 618 (CAOC/SECR SECR mor) (705616) Multi-States (Chhattisgarh, 09/2016 10/2024 2,140.00 2,547.36 88.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "619",
+      "project_code_candidate": "(705453)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Odisha) (09/2020) (03/2026) 0.00 Dahod-Indore via Sardarpur, Jhabua & Dhar 200.97 km incl. material modification for change in alignment via Amjhera 4.82 km 619 (CAOCWR WR mor) (705453) Multi-States (Gujarat, Madhya 06/2012 (09/2019)"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "620",
+      "project_code_candidate": "(705454)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) Chhota Udepur-Dhar 157 km 620 (CAOCWR WR mor) (705454) Multi-States (Gujarat, Madhya 02/2007 12/2025 1,794.00 1,861.88 58.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "621",
+      "project_code_candidate": "(400022)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) (08/2019) (12/2025) 0.00 Taranga Hill-Abu Road via Ambaji 116.65 km 621 (CAOC/NWR NWR mor) (400022) Multi-States (Gujarat, 07/2022 07/2030 2,798.00 2,061.73 50.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "622",
+      "project_code_candidate": "(705424)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Rajasthan) (11/2022) (07/2030) 0.00 Chandigarh-Baddi 33.23 km 622 (CAOC/NR NR mor) (705424) Multi-States (Haryana, 02/2018 12/2026 1,540.00 1,103.12 48.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "623",
+      "project_code_candidate": "(705410)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Himachal Pradesh) (11/2019) (12/2026) 0.00 Nangal Dam-Talwara 83.74 km - New broad gauge line & taking over siding Mukerian- Talwara 29.16 km 623 (CAOC/NR NR mor) (705410) Multi-States (Himachal 03/1983 (11/2019) 12/2025 2,018.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "624",
+      "project_code_candidate": "(705628)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh, Punjab) Bondamunda - Ranchi 158.50 km 624 (CAO/C/SER SER mor) (705628) Multi-States (Jharkhand, 03/2016 06/2025 3,029.00 2,706.77 95.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "625",
+      "project_code_candidate": "(616588)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Odisha) (05/2020) (06/2026) 0.00 Buramara - Chakulia 59.96 km PB9/SECR/2023-24 625 (CAO/C/SER SER mor) (616588) Multi-States (Jharkhand, 08/2024 12/2029 1,459.13 12.55 2.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "626",
+      "project_code_candidate": "(616227)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Odisha, West Bengal) (07/2025) (-) 0.00 3rd line between Chandil - Anara- Damodar section 121.26 km 626 (CAO/C/SER SER mor) (616227) Multi-States (Jharkhand, West 09/2024 09/2029 1,932.01 10.27 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "627",
+      "project_code_candidate": "(705668)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) (10/2025) (-) 0.00 Kharagpur-Adityapur - 3rd line 132 km 627 (CMD / RVNL RVNL mor) (705668) Multi-States (Jharkhand, West 09/2016 03/2025 3,250.00 3,297.43 98.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "628",
+      "project_code_candidate": "(703586)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) (08/2020) (06/2026) 0.00 Baiyyappanahalli-Hosur 48 km 628 (M.D/KRIDE SWR mor) (703586) Multi-States (Karnataka, Tamil 04/2019 12/2024 498.70 700.64 85.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "629",
+      "project_code_candidate": "(705635)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nadu) (11/2022) (01/2026) 0.00 Trivandrum - Kanyakumari 86.56 km 629 (CAO/CN/ERS SR mor) (705635) Multi-States (Kerala, Tamil 08/2017 03/2024 1,432.00 3,294.98 60.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "630",
+      "project_code_candidate": "(705457)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nadu) (08/2019) (06/2028) 0.00 Ratlam-Mhow-Khandwa-Akola 472.64 km including material modification for Fatehabad-Chandrawati Ganj-Ujjain 22.96 km and Rau-DADN doubling 9.40 km 630 (CAOCWR WR mor) (705457) Multi-States (Madhya Pradesh, 01/2008 (07/2019) 03/2027 1,656.25 5,084.39"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "631",
+      "project_code_candidate": "(705507)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) Itarsi-Nagpur bal. 280 km 631 (CAOC/CR CR mor) (705507) Multi-States (Madhya Pradesh, 09/2016 03/2027 2,449.91 2,318.11 55.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "632",
+      "project_code_candidate": "(705481)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) (02/2020) (12/2027) 0.00 Ramganj Mandi-Bhopal 262 km 632 (CPM/Kota WCR mor) (705481) Multi-States (Madhya Pradesh, 02/2000 12/2025 3,032.00 4,554.84 88.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "633",
+      "project_code_candidate": "(705764)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Rajasthan) (08/2019) (12/2027) 0.00 Nimach-Badi Sadri NL Project 48 km 633 (CAOC/NWR NWR mor) (705764) Multi-States (Madhya Pradesh, 10/2018 03/2026 495.00 577.16 60.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "635",
+      "project_code_candidate": "(705480)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Rajasthan, Uttar Pradesh) (09/2021) (12/2026) 0.00 Lalitpur-Satna, Rewa-Singrauli & Mahoba-Khajuraho 541 km 635 (CE/C-4/WCR WCR mor) (705480) Multi-States (Madhya Pradesh, 01/2007 03/2027 8,914.00 6,694.70 73.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "636",
+      "project_code_candidate": "(705598)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttar Pradesh) (07/2019) (12/2027) 0.00 Jhansi-Bina - 3rd line 152.57 km 636 (CAO/C/NCR NCR mor) (705598) Multi-States (Madhya Pradesh, 09/2016 03/2022 2,002.00 1,949.80 98.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "637",
+      "project_code_candidate": "(616586)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttar Pradesh) (10/2019) (03/2026) 0.00 Bangriposi - Gorumahisani 85.60 km PB9/SECR/2023-24 637 (CAO/C/SER SER mor) (616586) Multi-States (Odisha, West 08/2024 12/2029 2,269.49 7.84 2.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 87,
+      "serial": "638",
+      "project_code_candidate": "(705629)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) (07/2025) (-) 0.00 Narayangarh - Bhadrak - 3rd line 155 km 638 (CAO/C/SER SER mor) (705629) Multi-States (Odisha, West 03/2019 12/2025 2,400.00 2,927.26 87.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 88,
+      "serial": "639",
+      "project_code_candidate": "(400223)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "Tiruchchirappalli-Nagore-Karaikal with extension of Nagapattinam-Velankani- Tiruthiraipundi incl. new material modification of Karaikal - Peralam 23 km new line 639 (CAOC/SR SR mor) (400223) Multi-States (Puducherry, Tamil 11/1995 (12/2019) 03/2025 713.00 1,271.33 80.00 (03/2028) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 88,
+      "serial": "640",
+      "project_code_candidate": "(602797)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nadu) Sainthia, Sitarampur, Mughalsarai, Allahabad & Etawah - Bypass 35 km 640 (CAOC/ER ER mor) (602797) Multi-States (Uttar Pradesh, West 08/2017 03/2027 461.64 208.47 15.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 125,
+      "serial": "1279",
+      "project_code_candidate": "(619199)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bangalore Chennai Expressway Phase-II Pkg-I from km.71.000 to Km 96.000 Bethamangala in the state of Karnataka to Byreddypalli 1279 (NHAI) (619199) Multi-States (Andhra Pradesh, 12/2020 (10/2022) 10/2024 1,410.01 747.22 99.20 (09/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 125,
+      "serial": "1280",
+      "project_code_candidate": "(618681)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Karnataka) 6L Aluru - Jakkuva Section of NH-130CD Road from km 365.033 to km 396.800 Pkg. 1 1280 (NHAI) (618681) Multi-States (Andhra Pradesh, 02/2021 (03/2022) 03/2024 1,216.12 731.37 99.63 (10/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 125,
+      "serial": "1281",
+      "project_code_candidate": "(618477)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Odisha) Bangalore Chennai Expressway Phase-III Package I Gudipala to Walajajhpet from Km 156.000 to Km 180.000 1281 (NHAI) (618477) Multi-States (Andhra Pradesh, 10/2020 (05/2022) 05/2024 1,481.87 751.77 99.02 (10/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 125,
+      "serial": "1282",
+      "project_code_candidate": "(618634)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Tamil Nadu) 6L of Veera Kaveri Raja Puram to Pondavakkam from km 61.380 to km 96.040 of NH 716B Pkg-III 1282 (NHAI) (618634) Multi-States (Andhra Pradesh, 03/2021 (01/2023) 01/2025 1,439.77 809.30 98.89 (09/2026)"
+    },
+    {
+      "section": "ongoing",
+      "page": 125,
+      "serial": "1283",
+      "project_code_candidate": "(618769)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Tamil Nadu) Walajahpet/Ranipet to TN/AP Border Section of from Km.106.800 to Km.133.36 NH-4 1283 (NHAI) (618769) Multi-States (Andhra Pradesh, 12/2024 09/2027 1,338.14 243.33 15.58"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1284",
+      "project_code_candidate": "(618772)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "6L of Kumarajapet to Veera Kaveri Raja Puram from km 43.800 to km 61.380 of NH- 716B Pkg-II 1284 (NHAI) (618772) Multi-States (Andhra Pradesh, 02/2021 (10/2023) 10/2025 702.52 405.96 99.80 (09/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1285",
+      "project_code_candidate": "(619077)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Tamil Nadu) 6 laning of Balance Work of Chennai - Tada from km. 21.40 to km. 54.40 1285 (NHAI) (619077) Multi-States (Andhra Pradesh, 12/2017 03/2020 464.62 389.97 100.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1286",
+      "project_code_candidate": "(618747)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Tamil Nadu) (03/2018) (09/2026) 0.00 Khammam-Devarapalle Pkg III [4L Access Controlled Greenfield from Chintagudem village to Recherla village Design Chainage 63117 to 105236] 1286 (NHAI) (618747) Multi-States (Andhra Pradesh, 01/2021 (09/2022) 09/2024 829.50"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1287",
+      "project_code_candidate": "(618818)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) 4L Access Controlled Greenfield Highway section on NH-163G Khammam Vijayawada from Remidicherla village at Design Ch. 280.200 Km to Jakkampudi village on NH-16 at Design Ch. 309.909 Km Package-III 1287 (NHAI) (618818)"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1288",
+      "project_code_candidate": "(619143)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 4L Access Controlled Greenfield Highway section on NH-163G Khammam Vijayawada from BrahmanapalliK village at Design Ch. 250.400 Km to Remidicherla village at Design Ch. 280.200 KmPackage-II 1288 (NHAI) (619143) Multi-States (Andhra Pradesh, Telangana)"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1289",
+      "project_code_candidate": "(619212)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 6L Access Controlled Greenfield Highway of Julekal village to Dinnedevarapadu village from Km 242.200 to Km 280.400 Pkg-2 1289 (NHAI) (619212) Multi-States (Andhra Pradesh, 01/2022 (01/2023) 01/2025 1,227.57 539.20 70.60 (04/2027) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1290",
+      "project_code_candidate": "(618359)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) Widening/Improvement to 4-Lane with Paved Shoulder from km 55000 Nagabang Gamsuk to km 82514 Oyan in the State of Assam and Arunachal Pradesh on EPC mode under Bharatmala Pariyojna of Length 27.514"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1291",
+      "project_code_candidate": "(618531)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 6L of Aurangabad to Bihar-Jharkhand border Chordaha section from km. 180.000 to km. 209.827 of NH-2 PKG-01 1291 (NHAI) (618531) Multi-States (Bihar, Jharkhand) 02/2021 (12/2024) 12/2026 1,054.46 242.25 37.93 (12/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1292",
+      "project_code_candidate": "(618724)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 6L Greenfield Varanasi-Ranchi-Kolkata Highway from Anarbansalea village to Sagrampur village From KM. 151200 to KM. 184700Package-7 1292 (NHAI) (618724) Multi-States (Bihar, Jharkhand) 03/2023 (07/2025) 06/2027 1,719.20 388.27 28.16 (03/2028) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1293",
+      "project_code_candidate": "(618732)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 6L Greenfield Varanasi- Ranchi- Kolkata Highway from Sonepurbigha village to junction with NH- 22 Chatra Bypass near Chatra from km 184.700 to km 222.000Pkg - 8 1293 (NHAI) (618732) Multi-States (Bihar, Jharkhand) 03/2023"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1294",
+      "project_code_candidate": "(618951)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Hariharganj to Parwa Mode section from km 23.284 to km 57.049 of NH-98 1294 (NHAI) (618951) Multi-States 09/2020 02/2024 1,125.78 830.08 91.30"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1295",
+      "project_code_candidate": "(618952)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (Bihar, Jharkhand) (03/2022) (09/2026) 0.00 4L of Sahibganj - Manihari Ganga Bridge including Manihari Bypass 1295 (NHAI) (618952) Multi-States 10/2016 10/2024 2,301.89 2,026.97 87.02"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1296",
+      "project_code_candidate": "(619078)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (Bihar, Jharkhand) (11/2020) (10/2027) 0.00 Six Laning of Bihar - Jharkhand Border Chordaha - Gorhar section of NH-2 from km 249.525 to km 320.810 1296 (NHAI) (619078) Multi-States (Bihar, Jharkhand) 12/2017 (06/2019) 11/2021"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1297",
+      "project_code_candidate": "(619307)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 4L of Munger Mirzachauki section from Km 157350 to Km 193931 Pkg-4 1297 (NHAI) (619307) Multi-States 02/2021 08/2024 1,376.56 896.75 92.74"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1298",
+      "project_code_candidate": "(618530)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (Bihar, Jharkhand) (08/2022) (10/2026) 0.00 Six Laning of Varanasi to Aurangabad from km. 786.00 to km. 978.40 of Old NH-2 1298 (NHAI) (618530) Multi-States (Bihar, Uttar 02/2009 03/2014 3,241.56 2,864.10 99.92"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1299",
+      "project_code_candidate": "(618728)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) (09/2011) (09/2026) 0.00 6L Greenfield Varanasi-Ranchi-Kolkata Highway from junction with NH-19 & Varanasi Ring Road near Rewasa village to junction with Chandauli-Chainpur road near Khainti village from Km. 0.000 to Km. 27.000"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1300",
+      "project_code_candidate": "(618882)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Construction of additional 3-Lane Bridge over River Ganga for connection between Buxar and Bharauli on NH-922 in the State of Uttar Pradesh and Bihar on Hybrid Annuity Mode 1300 (NHAI) (618882) Multi-States (Bihar,"
+    },
+    {
+      "section": "ongoing",
+      "page": 126,
+      "serial": "1301",
+      "project_code_candidate": "(619154)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Construction of Four Lane Highway from Ghazipur- Ballia-UP/Bihar State Border Greenfield section of NH-31 Package III [from Pindari km 78.150 to Rawalganj Bypass Km 117.120] on EPC Mode in the state of Uttar"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1302",
+      "project_code_candidate": "(618584)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "4L of Kishanganj - Bahadurganj section from Km. 0.000 to Km. 23.649 & interchange at Start Point Length - 1.200 Km of NH-27 1302 (NHAI) (618584) Multi-States (Bihar, West 01/2025 (12/2025) 12/2027 962.84 221.43 20.14"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1303",
+      "project_code_candidate": "(619064)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) Vadodara Mumbai Expressway Talsari to Karvad Phase IB - Pkg X [Km 103.400 to Km 128.000] 1303 (NHAI) (619064) Multi-States (Dadra & Nagar Haveli and Daman 10/2020 (03/2022) 03/2024 1,909.74 1,098.49 36.23"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1304",
+      "project_code_candidate": "(618942)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) & Diu, Gujarat, Maharashtra) Balance work of 2L PS from Km 30.800 to Km 70.800 and 2L with Rigid Carriageway from Km 70.800 to km 84.120 of Khanapur- KA/GOA Border section of NH-4A"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1305",
+      "project_code_candidate": "(618637)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bal. Works of Fagne Km. 510.000 to Maharashtra/Gujarat Border Km. 650.794 1305 (NHAI) (618637) Multi-States (Gujarat, 12/2019 09/2022 1,654.07 1,448.08 99.70"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1306",
+      "project_code_candidate": "(618486)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) (09/2020) (12/2026) 0.00 Delhi-Amritsar-Katra Expressway Phase-I Pkg-V from Junction with Ambala-Kaithal- Hissar road NH-152 near Kharak Pandwa village to Junction with Patiala-Samana- Patran road SH-10 near Ghagga village Km 120250 to Km"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1307",
+      "project_code_candidate": "(619093)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 4L Ismailabad to Ambala Section of NH-152 Lot-4/Package-1 1307 (NHAI) (619093) Multi-States 02/2023 12/2025 609.32 311.06 76.30"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1308",
+      "project_code_candidate": "(619134)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (Haryana, Punjab) (12/2023) (02/2027) 0.00 6L of Ambala-Chandigarh greenfield section from Km. 0.000 to Km. 25.000 with 4L spur to Lalru from Km. 0.000 to Km. 5.828 & spur to PR-7 road from"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1309",
+      "project_code_candidate": "(619216)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 6L access Controlled Greenfield Highway from Adhoya Musalmana to Sadopur section of Shamli -Ambala Package-III Design Ch. Form km 84.400 to km 121.786 1309 (NHAI) (619216) Multi-States (Haryana, Punjab) 05/2022 (05/2023) 05/2025 1,491.72"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1310",
+      "project_code_candidate": "(618505)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Additional Structures on 6LGurgaon-Jaipur Section of NH-48 between KM 42.700 to KM 273.00 1310 (NHAI) (618505) Multi-States (Haryana, 08/2022 (12/2022) 06/2024 409.64 204.85 88.90 (11/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1311",
+      "project_code_candidate": "(618691)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Rajasthan) 4 laning of Aligarh-Palwal Section from Km. 46.390 Design Chainage to Km. 69.110 Terminating at junction EPE Package-II from Kurana- Eastern Peripheral Expressway of NH-334D 1311 (NHAI) (618691) Multi-States (Haryana, Uttar Pradesh)"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1312",
+      "project_code_candidate": "(618723)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 6L access Controlled Greenfield Highway from Ranipur Barsi to Adhoya Musalmana section of Shamli -Ambala Package-II Design Ch. Form km 45.500 to km 84.400 1312 (NHAI) (618723) Multi-States (Haryana, Uttar 06/2022 (05/2023) 05/2025"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1313",
+      "project_code_candidate": "(619068)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) Construction of Greenfield Connectivity to Jewar International Airport from DND- Faridabad-Ballabhgarh Bypass KMP Link - Spur to Delhi Mumbai Expressway 1313 (NHAI) (619068) Multi-States (Haryana, Uttar 07/2022 (06/2023) 06/2025 2,920.69 1,804.32 76.30"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1314",
+      "project_code_candidate": "(618907)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh) 2L/4L of Hoshiarpur to Una section including Hoshiarpur Bypass of NH 503A 1314 (NHAI) (618907) Multi-States (Himachal 03/2023 05/2027 571.34 265.20 26.43"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1315",
+      "project_code_candidate": "(619066)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh, Punjab) (05/2025) (05/2027) 0.00 Delhi-Amritsar-Katra Expressway Phase-II Pkg-XIV from Junction with Pathankot- Gurdaspur road NH-54 near Balsua to Junction with Hiranagar Road near village Gurha Baildaran km 423500 to km 468100 1315"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1316",
+      "project_code_candidate": "(618533)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Barwa Adda Km. 398.240 to Panagarh Km. 521.120 1316 (NHAI) (618533) Multi-States (Jharkhand, West 08/2010 09/2016 1,560.39 1,696.36 100.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1317",
+      "project_code_candidate": "(618734)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) (04/2014) (09/2026) 0.00 6L Greenfield Varanasi- Ranchi- Kolkata Highway from junction with NH-320 in Lepo village to Kamlapur villageJH/WB border from km 358.500 to km 387.200 Pkg -13 1317 (NHAI) (618734) Multi-States"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1318",
+      "project_code_candidate": "(618909)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) 2L PS of JH / WB Border km. 70.524 - Purulia km.84.400 & Purulia km. 94.30 - Chandil Junction with NH-33 km. 153.705 of Old NH-32 1318 (NHAI) (618909) Multi-States (Jharkhand, West"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1319",
+      "project_code_candidate": "(618948)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Bengal) 4L of NH-80 section of Mirza Chauki to Farakka section from existing km 190.00 to design km 200.75 junction at km 3.100 of NH 133 B and from existing km 260.00 to"
+    },
+    {
+      "section": "ongoing",
+      "page": 127,
+      "serial": "1320",
+      "project_code_candidate": "(619205)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Six Laning of KT/KL Border Thalapaddy -Chengala from Km. 17.200 to Km. 57.20 1320 (NHAI) (619205) Multi-States (Karnataka, 05/2020 05/2024 1,981.07 1,795.92 100.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1321",
+      "project_code_candidate": "(618516)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "6L from Sankeshwar Bypass to MH-KNT Border from Km. 555.017 to Km. 592.853 of NH-48 Pkg-II 1321 (NHAI) (618516) Multi-States (Karnataka, 01/2022 (10/2022) 04/2025 1,388.70 1,203.78 85.30 (05/2027) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1322",
+      "project_code_candidate": "(618636)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) Akkalkot MH/KN border New Greenfield corridor from Km 512.000 to Km 548.400 of NH-150C part of Akkalkot KN/TS Border section Package XIV 1322 (NHAI) (618636) Multi-States (Karnataka, 03/2023 (10/2024) 10/2026 1,370.75 336.55"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1323",
+      "project_code_candidate": "(618519)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) Bangalore Ring Road STRR-NH-948A- Package-I of Phase-III from Belagondapalli TN to TN/KNT border from km 144.480 to 179.969 1323 (NHAI) (618519) Multi-States (Karnataka, Tamil 03/2022 (05/2023) 05/2025 1,260.74 777.13 92.95 (12/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1324",
+      "project_code_candidate": "(618581)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nadu) Hosur to Dhamrapuri Pkg-1 [Neraluru - Thorapalli Agraharam] 1324 (NHAI) (618581) Multi-States (Karnataka, Tamil 10/2021 10/2024 1,828.66 1,467.50 78.70"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1325",
+      "project_code_candidate": "(618631)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nadu) (10/2022) (01/2027) 0.00 6L of MH/KN Border Nimbal Village to KN/TS Border Singnodi Village from Km. 162.5 to Km. 203.100 in Raichur of NH-150C Pkg-IV 1325 (NHAI) (618631) Multi-States (Karnataka, 03/2022 (11/2022)"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1326",
+      "project_code_candidate": "(618632)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) 6L Access Controlled Greenfield Highway of Nandinne village to Julekal village from Km 202.900 to Km 242.200 Pkg-1 1326 (NHAI) (618632) Multi-States (Karnataka, 02/2022 (01/2023) 01/2025 972.06 459.47 93.79 (09/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1327",
+      "project_code_candidate": "(619097)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) Thalassery Mahe Bypass Km 170.600 to Km 189.200 of NH-17New NH-66 in Kerala 1327 (NHAI) (619097) Multi-States (Kerala, 09/2017 05/2020 1,181.12 1,534.73 100.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1328",
+      "project_code_candidate": "(619101)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Puducherry) (12/2017) (09/2026) 0.00 4L Shahpur to Muktainagar from Km. 186.000 to km 216.278 of NH 753L Pkg II of Boregaon Buzurg to Muktainagar 1328 (NHAI) (619101) Multi-States (Madhya Pradesh, 12/2022 (03/2024) 03/2026"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1329",
+      "project_code_candidate": "(618556)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra) Construction of 26 VUPs, Major Bridge, Service Road etc. on Lalitpur-Sagar- Lakhnadon section of NH-44 NS 1329 (NHAI) (618556) Multi-States (Madhya Pradesh, 02/2023 (03/2024) 03/2026 665.91 574.39 97.40 (08/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1330",
+      "project_code_candidate": "(618668)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttar Pradesh) 4L of Chowka to Kaimaha near MP/UP Border section NH-34 from D. Ch. 145.000 to D. Ch. 197.266 excluding existing Chhatarpur bypass from D. Ch. 160.307 to D. Ch. 168.630 Package-4"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1331",
+      "project_code_candidate": "(618941)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 4L of Bamni - Rajura - Warur - Devada upto M.S. Border of NH - 930D from km 19.000 to km 51.985 1331 (NHAI) (618941) Multi-States (Maharashtra, 03/2022 (03/2024) 03/2026 968.05 852.15 78.16"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1332",
+      "project_code_candidate": "(618844)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Telangana) Viluppuram Km.0.000 to Puducherry Km.29.000 1332 (NHAI) (618844) Multi-States (Puducherry, Tamil 03/2018 11/2023 1,358.31 527.54 98.32"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1333",
+      "project_code_candidate": "(618845)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nadu) (11/2021) (10/2026) 0.00 Puducherry Km.29.000 to Poondiyankuppam Km.67.000 1333 (NHAI) (618845) Multi-States (Puducherry, Tamil 03/2018 11/2023 1,588.40 460.48 98.75"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1334",
+      "project_code_candidate": "(618847)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nadu) (11/2021) (10/2026) 0.00 Sattanathapuram to Nagapattinam from Km 123.800 to Km 179.555 1334 (NHAI) (618847) Multi-States (Puducherry, Tamil 03/2018 10/2022 2,899.77 1,595.47 85.60"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1335",
+      "project_code_candidate": "(618711)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Nadu) (10/2020) (12/2026) 0.00 6L with access control provision Saharanpur bypass to Ganeshpur section from 13.89 Km to 41.820 Km of Delhi- Dehradun Economic Corridor package-2 1335 (NHAI) (618711) Multi-States (Uttar Pradesh, 04/2022"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1336",
+      "project_code_candidate": "(618783)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttarakhand) 4-laning of Pilibhit - Sitarganj from Km. 32.500 to Km. 70.800 Pkg-2 of NH-30 1336 (NHAI) (618783) Multi-States (Uttar Pradesh, 01/2023 03/2026 1,471.19 480.64 44.41"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1337",
+      "project_code_candidate": "(618886)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttarakhand) (03/2024) (10/2027) 0.00 Road Safety Improvement of Critical Junctions on MuzaffarnagarHaridwar Section of NH-334 from Km 143000 to Km 196000 1337 (NHAI) (618886) Multi-States (Uttar Pradesh, 04/2025 (10/2025) 10/2027 238.66 47.37 22.64"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1338",
+      "project_code_candidate": "(618928)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttarakhand) Improvement & Up-gradation of NH-734 Section of Moradabad-Thakurdwara Kashipur including Moradabad & Kashipur Bypasse Package-III Kashipur Bypass Length 14.490 Km., Starts from Ch. 38770 and ends at Ch. 53260 existing Ch. 05560"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1339",
+      "project_code_candidate": "(618969)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) 4/6L of Spur to Haridwar Greenfield from Km. 0.000 to Km. 50.70 1339 (NHAI) (618969) Multi-States (Uttar Pradesh, 11/2021 02/2025 2,155.95 1,543.42 92.98"
+    },
+    {
+      "section": "ongoing",
+      "page": 128,
+      "serial": "1340",
+      "project_code_candidate": "(619217)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Uttarakhand) (02/2023) (09/2026) 0.00 4L of Haridwar-Nagina section from km. 0.00 to km. 71.614 of NH-74 1340 (NHAI) (619217) Multi-States (Uttar Pradesh, 12/2015 07/2020 1,659.12 1,548.54 99.85"
+    },
+    {
+      "section": "ongoing",
+      "page": 149,
+      "serial": "1668",
+      "project_code_candidate": "(701597)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Maharashtra, Odisha) Provision of 4G Mobile Services in Uncovered Villages of Arunachal Pradesh and 2 Districts of Assam 1668 (Department of Telecommunications) (701597) Multi-States (Arunachal 12/2020 (10/2021) 04/2023 1,255.49 237.98 99.84 (09/2026) 0.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 149,
+      "serial": "1669",
+      "project_code_candidate": "(704495)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) Pradesh, Assam) 502 Aspirational District Scheme in Four states - Bihar, Madhya Pradesh, Rajastha and Uttar Pradesh 1669 (Department of Telecommunications [DoT]) (704495) Multi-States (Bihar, Madhya Pradesh, 12/2019 (03/2021) 03/2022 421.65 152.96 99.59"
+    },
+    {
+      "section": "ongoing",
+      "page": 151,
+      "serial": "1720",
+      "project_code_candidate": "(701412)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (04/1997) (12/2026) 0.00 North Koel Reservoir Project 1720 (Department of Water Resources, River Development & GR) (701412) Multi-States 08/2017 03/2021 1,622.27 345.94 47.00"
+    },
+    {
+      "section": "ongoing",
+      "page": 151,
+      "serial": "1721",
+      "project_code_candidate": "(701530)",
+      "reason": "multi-state value crosses or may cross the name/state boundary",
+      "raw_excerpt": "(-) (-) (Bihar, Jharkhand) (01/2021) (06/2027) 0.00 Ken-Betwa Linking Development Project 1721 (Department of Water Resources, River Development,) (701530) Multi-States (Madhya Pradesh, NA 03/2029 21,030.00 8,530.86 0.00"
+    }
+  ]
+}
