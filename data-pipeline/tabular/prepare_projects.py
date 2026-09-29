@@ -167,7 +167,7 @@ def name_and_agency(words: list[dict], code_top: float) -> tuple[str, str | None
 
 def parse_block(words: list[dict], kind: str, page: int, serial: int,
                 anchor_top: float, page_words: list[dict], month: str,
-                source_file: str, actual_column: bool) -> dict:
+                source_file: str, actual_column: bool, start_column: bool = True) -> dict:
     completed = kind == "completed"
     name_high = 475 if not completed else 480
     codes = [w for w in words if 84 <= w["x0"] < 160 and CODE.fullmatch(w["text"])
@@ -195,7 +195,7 @@ def parse_block(words: list[dict], kind: str, page: int, serial: int,
         costs = tokens(data_words, 820, 940, NUMBER)
         spent = tokens(data_words, 940, 1050, NUMBER)
         expected_dates = 3 if actual_column else 2
-        if [len(approval), len(completion), len(costs), len(spent)] != [2, expected_dates, 2, 1]:
+        if [len(approval), len(completion), len(costs), len(spent)] != [2 if start_column else 1, expected_dates, 2, 1]:
             raise ValueError(f"column token counts: approval={approval}, completion={completion}, cost={costs}, expenditure={spent}")
         if actual_column:
             actual, original, revised = completion
@@ -209,17 +209,18 @@ def parse_block(words: list[dict], kind: str, page: int, serial: int,
         costs = tokens(data_words, 755, 845, NUMBER)
         spent = tokens(data_words, 845, 945, NUMBER)
         pct = tokens(data_words, 945, 1050, NUMBER)
-        if [len(approval), len(completion), len(costs), len(spent), len(pct)] != [2, 2, 2, 1, 1]:
+        if [len(approval), len(completion), len(costs), len(spent), len(pct)] != [2 if start_column else 1, 2, 2, 1, 1]:
             raise ValueError(f"column token counts: approval={approval}, completion={completion}, cost={costs}, expenditure={spent}, progress={pct}")
         actual, original, revised = None, *completion
         progress = valid_percentage(pct[0])
-    raw_dates = {"approval": approval[0], "start": approval[1],
+    start_raw = approval[1] if start_column else None
+    raw_dates = {"approval": approval[0], "start": start_raw,
                  "actual": actual, "original": original, "revised": revised}
     raw_costs = {"original": costs[0], "revised": costs[1], "expenditure": spent[0]}
     result = {
         "project_id": code["text"].strip("()"), "project_name": project_name,
         "ministry": None, "agency": agency, "sector": None, "state": state,
-        "approval_date": parse_date(approval[0]), "start_date": parse_date(approval[1]),
+        "approval_date": parse_date(approval[0]), "start_date": parse_date(start_raw),
         "original_completion_date": parse_date(original),
         "revised_completion_date": parse_date(revised),
         "actual_completion_date": parse_date(actual),
@@ -231,7 +232,7 @@ def parse_block(words: list[dict], kind: str, page: int, serial: int,
         "raw_date_values": json.dumps(raw_dates, ensure_ascii=False),
         "raw_cost_values": json.dumps(raw_costs, ensure_ascii=False),
     }
-    for field, raw in [("approval_date", approval[0]), ("start_date", approval[1]),
+    for field, raw in [("approval_date", approval[0]), ("start_date", start_raw),
                        ("original_completion_date", original),
                        ("revised_completion_date", revised),
                        ("actual_completion_date", actual)]:
@@ -241,7 +242,8 @@ def parse_block(words: list[dict], kind: str, page: int, serial: int,
 
 
 def page_rows(page, page_number: int, kind: str, month: str,
-              source_file: str, actual_column: bool) -> tuple[list[dict], list[dict], list[int]]:
+              source_file: str, actual_column: bool,
+              start_column: bool = True) -> tuple[list[dict], list[dict], list[int]]:
     words = [w for w in page.extract_words(extra_attrs=["fontname"])
              if 250 < w["top"] < 1420]
     anchors = [w for w in words if w["x0"] < 85 and w["text"].isdigit()
@@ -266,7 +268,7 @@ def page_rows(page, page_number: int, kind: str, month: str,
         block = [w for w in words if prior_end < w["top"] <= end]
         try:
             rows.append(parse_block(block, kind, page_number, int(anchor["text"]),
-                                    anchor["top"], words, month, source_file, actual_column))
+                                    anchor["top"], words, month, source_file, actual_column, start_column))
         except ValueError as exc:
             failures.append({"source_file": source_file, "report_month": month,
                              "section": kind, "page": page_number, "serial": anchor["text"],
@@ -299,18 +301,21 @@ def parse_report(path: Path) -> tuple[list[dict], list[dict], dict]:
             if report_month(header) != month:
                 raise RuntimeError(f"{path.name} page {index + 1}: inconsistent report month")
             actual_column = "Actual Date of Completion" in header
+            start_column = "Start Date" in header
             if kind == "ongoing" and actual_column:
                 raise RuntimeError(f"{path.name} page {index + 1}: unexpected ongoing header")
             records, errors, page_serials = page_rows(
-                page, index + 1, kind, month, path.name, actual_column)
+                page, index + 1, kind, month, path.name, actual_column, start_column)
             section_pages[kind] += 1
             serials[kind].extend(page_serials)
             (completed if kind == "completed" else ongoing).extend(records)
             failures.extend(errors)
     for kind in ("ongoing", "completed"):
         actual = serials[kind]
-        if not actual or actual != list(range(1, max(actual) + 1)):
+        if actual and actual != list(range(1, max(actual) + 1)):
             raise RuntimeError(f"{path.name}: {kind} printed serials are missing, repeated or out of order")
+        if kind == "ongoing" and not actual:
+            raise RuntimeError(f"{path.name}: no ongoing project table found")
     ongoing, ongoing_dupes, ongoing_conflicts = deduplicate(ongoing)
     completed, completed_dupes, completed_conflicts = deduplicate(completed)
     failures.extend(ongoing_conflicts + completed_conflicts)

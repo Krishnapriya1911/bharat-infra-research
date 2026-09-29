@@ -61,7 +61,7 @@ def test_all_existing_rows_validate_or_report_failure_categories():
                 category = (str(error["loc"]), error["type"])
                 failures[category] = failures.get(category, 0) + 1
     assert not failures, f"CSV validation failure categories: {failures}"
-    assert len(source) == 8728
+    assert sum("2026-04" <= r["report_month"] <= "2026-08" for r in source) == 8728
 
 
 def test_percentage_bounds_zero_cost_and_extra_fields():

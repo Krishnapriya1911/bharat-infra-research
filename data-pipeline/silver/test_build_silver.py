@@ -30,7 +30,8 @@ def test_real_panel_validates_and_preserves_input(tmp_path):
     assert hashlib.sha256(INPUT.read_bytes()).digest() == before
     fields, rows = read_csv(silver)
     assert fields == list(SILVER_COLUMNS) == list(MonthlyRecord.model_fields)
-    assert audit["input_row_count"] == 8728
+    assert audit["input_row_count"] == len(rows)
+    assert sum("2026-04" <= r["report_month"] <= "2026-08" for r in rows) == 8728
     assert audit["validated_row_count"] == len(rows)
     assert audit["validation_failure_count"] == 0
     assert audit["validation_failures"] == []
