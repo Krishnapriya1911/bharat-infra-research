@@ -5,6 +5,7 @@
 *.pyc
 .env
 .env.*
-datasets
+datasets/processed
+datasets/raw
 models
 notebooks
