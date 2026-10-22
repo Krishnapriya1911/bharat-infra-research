@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the Bharat Infra research prototype using sample infrastructure project evidence.">
+  <title>Bharat Infra · Research Console</title>
+  <style>
+    :root{font-family:Inter,system-ui,sans-serif;color:#19342d;background:#f4f6f0;font-synthesis:none}
+    *{box-sizing:border-box}body{margin:0}a{color:inherit}button,textarea{font:inherit}
+    header{border-bottom:1px solid #d8dfd3;background:#fff;padding:22px max(6vw,20px);display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .brand{font-weight:750;letter-spacing:-.6px;font-size:22px}.brand span{font-weight:400;color:#6c786f;margin-left:10px;font-size:14px}
+    nav{display:flex;gap:22px;font-size:13px}main{max-width:1240px;margin:auto;padding:48px 24px}
+    .eyebrow{text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:2px;color:#55755f}.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:end;margin-bottom:32px}
+    h1{font-size:clamp(30px,4.8vw,54px);font-weight:550;letter-spacing:-2px;line-height:1.1;margin:13px 0 20px;max-width:700px}
+    p{color:#56675b;line-height:1.7;font-size:14px}.note{border-left:3px solid #a9bf8b;padding:4px 0 4px 18px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.panel{background:#fff;border:1px solid #dce2d6;border-radius:16px;padding:26px;min-width:0}
+    .panel-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px}h2{font-size:18px;font-weight:600;margin:0}
+    .tag{font-size:10px;padding:6px 9px;border-radius:20px;background:#eef4e8;color:#45633b;white-space:nowrap}
+    textarea{width:100%;min-height:410px;resize:vertical;border:1px solid #dce2d6;background:#fbfcf9;border-radius:8px;padding:16px;color:#273e32;font-family:ui-monospace,monospace;font-size:12px;line-height:1.65}
+    textarea:focus{outline:2px solid #7c9b64;outline-offset:2px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    button{cursor:pointer;border:1px solid #cdd7c6;background:#fff;border-radius:7px;padding:11px 16px;font-size:13px;color:#19342d}button.primary{background:#244a38;color:white;border-color:#244a38}button:disabled{opacity:.5;cursor:wait}
+    #status{min-height:25px;margin:16px 0 0;font-size:12px}#status.error{color:#a43b2f}.empty{padding:70px 15px;text-align:center;color:#758271}
+    .metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{padding:19px;background:#f4f7ef;border-radius:10px}.metric small{display:block;color:#5d705c;font-size:11px;line-height:1.6}.metric strong{display:block;font-size:32px;font-weight:550;margin:8px 0 0;letter-spacing:-1px}.metric em{font-size:11px;font-style:normal;color:#768370}
+    .evidence{margin-top:20px}.row{display:flex;justify-content:space-between;gap:15px;font-size:12px;padding:13px 0;border-bottom:1px solid #edf0e8}.row span{color:#60705d}.row strong{text-align:right;font-weight:550}
+    #explanation{font-size:13px;border-top:1px solid #dce2d6;margin-top:20px;padding-top:18px;white-space:pre-wrap}.footer{margin-top:26px;font-size:11px;color:#73816e;display:flex;justify-content:space-between;gap:20px}.sr{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0)}
+    @media(max-width:780px){.hero,.grid{grid-template-columns:1fr}.hero{gap:0}header{align-items:flex-start}.brand span{display:block;margin:6px 0 0}main{padding-top:30px}.panel{padding:19px}textarea{min-height:350px}nav{gap:12px}}
+  </style>
+</head>
+<body>
+  <header><div class="brand">Bharat Infra<span>Research Console</span></div><nav><a href="/docs">API reference</a><a href="https://github.com/Krishnapriya1911/bharat-infra-research">Source</a></nav></header>
+  <main>
+    <section class="hero"><div><div class="eyebrow">Infrastructure evidence · Phase 0</div><h1>Inspect the evidence.<br>Understand the discrepancy.</h1><p>Compare reported progress, expenditure and schedule evidence in a transparent research prototype.</p></div><p class="note">Use sample data only. Scores are illustrative rule-based indicators, not validated predictions or findings of misconduct. Images are not analysed.</p></section>
+    <div class="grid">
+      <section class="panel"><div class="panel-head"><h2>Project evidence</h2><span class="tag">Editable sample</span></div><label class="sr" for="project">Project evidence JSON</label><textarea id="project" spellcheck="false" aria-describedby="status" placeholder="Load the sample project to begin."></textarea><div class="actions"><button id="sample">Load sample project</button><button class="primary" id="evaluate">Evaluate evidence</button></div><p id="status" role="status" aria-live="polite">Load the sample, then edit its values to explore the evidence rules.</p></section>
+      <section class="panel"><div class="panel-head"><h2>Evidence assessment</h2><span class="tag">Illustrative results</span></div><div id="empty" class="empty">Your assessment will appear here.<p>No evaluation has been run yet.</p></div><div id="results" hidden><div class="metrics"><div class="metric"><small>Delay risk indicator</small><strong id="delay">—</strong><em>0–100 · not a probability</em></div><div class="metric"><small>Integrity indicator</small><strong id="integrity">—</strong><em>0–100 · not an audit finding</em></div></div><div class="evidence"><div class="row"><span>Project</span><strong id="project-id">—</strong></div><div class="row"><span>Planned vs reported progress gap</span><strong id="progress">—</strong></div><div class="row"><span>Expenditure minus reported progress</span><strong id="finance">—</strong></div><div class="row"><span>Days after planned end date</span><strong id="schedule">—</strong></div></div><p id="explanation"></p></div></section>
+    </div>
+    <div class="footer"><span>Sample evidence · Typed validation · Transparent rules</span><span>No trained model or visual-progress inference</span></div>
+  </main>
+  <script>
+    const byId=id=>document.getElementById(id);
+    const setStatus=(message,error=false)=>{byId('status').textContent=message;byId('status').classList.toggle('error',error)};
+    const busy=value=>{byId('sample').disabled=value;byId('evaluate').disabled=value};
+    const clearResults=()=>{byId('results').hidden=true;byId('empty').hidden=false};
+    byId('project').addEventListener('input',()=>{clearResults();setStatus('Evidence edited. Evaluate again to refresh the assessment.')});
+    byId('sample').addEventListener('click',async()=>{
+      busy(true);clearResults();setStatus('Loading sample project…');
+      try{const response=await fetch('/projects/bridge-001');if(!response.ok)throw Error('Unable to load sample project.');byId('project').value=JSON.stringify(await response.json(),null,2);setStatus('Sample loaded. Edit the evidence or evaluate it as supplied.')}catch(error){setStatus(error.message,true)}finally{busy(false)}
+    });
+    byId('evaluate').addEventListener('click',async()=>{
+      clearResults();let project;
+      try{project=JSON.parse(byId('project').value)}catch{setStatus('Enter valid JSON or load the sample project first.',true);return}
+      busy(true);setStatus('Evaluating evidence…');
+      try{
+        const response=await fetch('/risk/evaluate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(project)});
+        const result=await response.json();
+        if(!response.ok){const detail=Array.isArray(result.detail)?result.detail.map(item=>item.loc.join('.')+': '+item.msg).join('; '):result.detail;throw Error(detail||'Evaluation failed.')}
+        byId('delay').textContent=result.delay_risk_score.toFixed(1);byId('integrity').textContent=result.integrity_score.toFixed(1);
+        byId('project-id').textContent=result.project_id;byId('progress').textContent=result.evidence.progress_discrepancy+' percentage points';byId('finance').textContent=result.evidence.financial_progress_discrepancy+' percentage points';byId('schedule').textContent=result.evidence.schedule_deviation+' days';byId('explanation').textContent=result.explanation;
+        byId('empty').hidden=true;byId('results').hidden=false;setStatus('Assessment complete. Results apply to the submitted evidence only.');
+      }catch(error){setStatus(error.message,true)}finally{busy(false)}
+    });
+  </script>
+</body>
+</html>

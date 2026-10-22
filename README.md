@@ -2,12 +2,13 @@
 
 A research prototype for infrastructure project evidence checking and delay analysis, built with **Python, FastAPI and Pydantic**. The repository combines an illustrative evidence API with a tabular pipeline for MoSPI PAIMANA project reports.
 
-[Try the API locally](#run-the-api) · [Data pipeline](data-pipeline) · [Research question](docs/research-question.md) · [Limitations](docs/limitations.md)
+[Try the API locally](#run-the-api) · [Deployment](docs/deployment.md) · [Data pipeline](data-pipeline) · [Research question](docs/research-question.md) · [Limitations](docs/limitations.md)
 
 ## Implemented components
 
 | Component | What it does | Source |
 | --- | --- | --- |
+| Research console | Editable sample evidence and live API-backed assessments | [Console](backend/app/static/index.html) |
 | Typed API | Validates project locations, dates, progress and expenditure fields | [API](backend/app/main.py), [contracts](backend/app/models.py) |
 | Evidence rules | Calculates progress discrepancy, expenditure discrepancy and days overdue | [Evidence engine](backend/app/evidence_engine.py) |
 | Report extraction | Parses supported PAIMANA PDF layouts and records provenance and parsing failures | [Tabular pipeline](data-pipeline/tabular) |
@@ -15,7 +16,7 @@ A research prototype for infrastructure project evidence checking and delay anal
 | Gold cohort | Builds a reported-completion survival cohort with exclusions and audit metadata | [Cohort builder and methodology](data-pipeline/gold) |
 | Verification | Tests API behaviour, schemas, parsing, trajectories and cohort construction | [API tests](backend/tests), [pipeline tests](data-pipeline) |
 
-The API currently uses mock project data and illustrative rule-based scores. It does not call the tabular pipeline or a trained prediction model. A visual-progress model and frontend application are planned, not implemented.
+The API currently uses mock project data and illustrative rule-based scores. It does not call the tabular pipeline or a trained prediction model. The browser research console is served at `/`; a visual-progress model is not implemented.
 
 ## Run the API
 
@@ -30,10 +31,11 @@ python -m pip install -r backend/requirements.txt
 python -m uvicorn app.main:app --app-dir backend --reload
 ```
 
-Open [the interactive API documentation](http://127.0.0.1:8000/docs). There are two application endpoints:
+Open [the research console](http://127.0.0.1:8000/) or [the interactive API documentation](http://127.0.0.1:8000/docs). The API exposes:
 
 | Method | Path | Behaviour |
 | --- | --- | --- |
+| GET | `/health` | Reports API availability and research-demo mode |
 | GET | `/projects/{project_id}` | Returns a mock project; unknown IDs return 404 |
 | POST | `/risk/evaluate` | Validates a project payload and returns evidence metrics with illustrative scores |
 
@@ -94,4 +96,4 @@ PYTHONPATH=data-pipeline python -m pytest -q data-pipeline
 
 ## Current scope
 
-The repository is a research foundation, not a validated infrastructure prediction system. No trained model accuracy, satellite-derived progress estimate or verified live deployment is claimed. The next research steps are to establish prediction cutoffs, construct leakage-safe features, evaluate baselines and connect validated results to an interface.
+The repository is a research foundation, not a validated infrastructure prediction system. No trained model accuracy, satellite-derived progress estimate or verified live deployment is claimed. The next research steps are to establish prediction cutoffs, construct leakage-safe features, evaluate baselines and extend the evidence console with validated results.

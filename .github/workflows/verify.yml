@@ -1,0 +1,32 @@
+name: Verify research API
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r backend/requirements.txt -r data-pipeline/tabular/requirements.txt
+      - run: python -m pytest -q
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t bharat-infra-research .
+      - run: docker run -d --name research-api -p 8000:8000 bharat-infra-research
+      - name: Check running service
+        run: |
+          curl --fail --retry 20 --retry-connrefused --retry-delay 1 --max-time 3 http://127.0.0.1:8000/health
+          curl --fail http://127.0.0.1:8000/
+          curl --fail http://127.0.0.1:8000/projects/bridge-001
+          curl --fail -X POST http://127.0.0.1:8000/risk/evaluate -H 'Content-Type: application/json' --data-binary @datasets/mock_project.json
+      - name: Container logs
+        if: always()
+        run: docker logs research-api
