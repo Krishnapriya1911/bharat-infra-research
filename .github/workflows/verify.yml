@@ -23,7 +23,7 @@ jobs:
       - run: docker run -d --name research-api -p 8000:8000 bharat-infra-research
       - name: Check running service
         run: |
-          curl --fail --retry 20 --retry-connrefused --retry-delay 1 --max-time 3 http://127.0.0.1:8000/health
+          curl --fail --retry 20 --retry-all-errors --retry-delay 1 --max-time 3 http://127.0.0.1:8000/health
           curl --fail http://127.0.0.1:8000/
           curl --fail http://127.0.0.1:8000/projects/bridge-001
           curl --fail -X POST http://127.0.0.1:8000/risk/evaluate -H 'Content-Type: application/json' --data-binary @datasets/mock_project.json
